@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tree Control Example</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body ng-app="hTreeUI" ng-controller="myCtrl">
+    <ul id="modelul" id="tree">
+        <li ng-repeat="table in tablesInModelObjects"> <span ng-class="table.arrow" ng-init="table.arrow='fa fa-chevron-circle-right'" ng-click="toggleTableSelection(table)"></span>
+            <input type="checkbox" id="table" ng-click="toggleSelectAll(table)">
+            <label for="table">{{ table.name }} {{ table.selected }}</label>
+            <ul ng-if="table.columns" ng-style="{'display': table.collapsed}" ng-init="table.collapsed='block'">
+                <li ng-repeat="column in table.columns">
+                    <input type="checkbox" checklist-model="table.selected" checklist-value="column" id="column">
+                    <label for="column">{{ column }}</label>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/checklist-model/checklist-model.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

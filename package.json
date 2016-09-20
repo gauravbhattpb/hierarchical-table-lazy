@@ -1,0 +1,28 @@
+{
+    "name": "hierachical-table"
+    , "version": "1.0.0"
+    , "description": "store data as hierachical table"
+    , "main": "index.js"
+    , "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+    , "repository": {
+        "type": "git"
+        , "url": "git+https://github.com/gauravbhattpb/hierachical-table.git"
+    }
+    , "keywords": [
+    "hierachical"
+    , "table"
+  ]
+    , "author": "Gaurav Bhatt"
+    , "license": "MIT"
+    , "bugs": {
+        "url": "https://github.com/gauravbhattpb/hierachical-table/issues"
+    }
+    , "homepage": "https://github.com/gauravbhattpb/hierachical-table#readme"
+    , "devDependencies": {
+        "angular": "^1.5.8"
+        , "checklist-model": "^0.10.0"
+        , "font-awesome": "^4.6.3"
+    }
+}
